@@ -1,0 +1,609 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+#loader{
+    width: 100%;
+    height: 100vh;
+    background: #ffffff url('../images/preview.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 9999;
+}
+.header-part{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.img-logo{
+    width: 70px;
+    animation-duration: 3s!important;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+.navbar{
+    box-shadow: 0 0 20px rgba(24, 8, 8, 0.664);
+    background-color: #ffffff;
+    height: auto;
+}
+.navbar ul li a{
+    color: rgb(14, 6, 6)!important;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+.navbar ul li a:hover{
+    color: rgba(37, 11, 11, 0.513)!important;
+}
+
+/***start search***/
+.search-box{
+    background-color: rgba(20, 20, 80, 0.801);
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+.search-box:hover > .search-txt{
+    width: 240px;
+}
+.search-txt{
+    border: none;
+    text-align: center;
+    outline: none;
+    background: none;
+    color: rgb(23, 255, 255);
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    width: 0;
+    transition: .5s;
+}
+::-webkit-input-placeholder{
+    color: rgba(23, 255, 255, 0.637);
+
+} 
+.search-btn{
+    font-size: 1.2rem;
+    color: rgb(2, 255, 255);
+}
+.search-btn:hover{
+    color: rgba(0, 255, 255, 0.781);
+}
+/****end search*****/
+.center-part{
+    width: 100%;
+    height: 90vh;
+   margin-top: 65px;
+}
+.frist-center-part{
+    height: 90vh;
+}
+.frist-center-part .social-icon{
+    width: 60px;
+    height: auto;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    left: 20px;
+}
+.social-icon a i{
+    margin: 10px 0;
+    font-size: 2rem;
+    padding: 10px 10px;
+    border-radius: 50px;
+    color: black;
+    background-image: linear-gradient(to right,rgba(0, 253, 253, 0.212),rgba(255, 0, 234, 0.253));
+    transition-duration: 500ms;
+ 
+}
+.social-icon a i:hover{
+    box-shadow: 0 0 20px rgb(0,0,0,.4);
+}
+.frist-center-part .card{
+    width: 55%;
+    height: 55%;
+    position: absolute;
+    left: 65%;
+    top: 40%;
+   transform: translate(-50%,-50%) perspective(2000px);
+    background: #ffffff;
+    transform-style: preserve-3d;
+    transition: 1s;
+    box-shadow: inset 300px 0 50px  rgb(0,0,0,.4),0 20px 100px rgb(0,0,0,.4);
+}
+.frist-center-part .card:hover{
+    transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px  rgba(0, 0, 0, 0.144),0 20px 10px rgba(0, 0, 0, 0.212);
+}
+.frist-center-part .card:before{
+    content: '';
+    position: absolute;
+    background: rgb(255, 174, 0);
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    left: 0px;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+.frist-center-part .card:after{
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 187, 0);
+    height: 100%;
+    width: 5px;
+    right: -5px;
+    top: 0;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+.card .imgbox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: 1s;
+}
+.card .imgbox img{
+    width: 100%;
+    height: 100%;
+}
+.frist-center-part .card:hover .imgbox{
+    transform: rotateY(-135deg);
+}
+.circle{
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    line-height: 110px;
+    text-align: center;
+    font-size: 4rem;
+
+}
+.circle .fa{
+    margin: 0;
+    padding: 0%;
+    animation: animates 2s linear infinite;
+    color: rgb(0, 68, 255);
+}
+@keyframes animates {
+    0%{
+        transform: translateY(-50%);
+        text-shadow: 0 50px 0 rgba(19, 15, 224, 0.671);
+    }
+    20%{
+        transform: translateY(0%);
+        text-shadow: 0 10px 0 rgba(6, 248, 236, 0.4);
+    }
+    40%{
+        transform: translateY(0%);
+        text-shadow: 0 -10px 0 rgba(253, 6, 233, 0.815);
+    }
+    60%{
+        transform: translateY(0%);
+        text-shadow: 0 0px 0 rgba(86, 245, 12, 0.4);
+    }
+    100%{
+        transform: translateY(100%);
+        text-shadow: 0 -50px 0 rgba(255, 218, 8, 0.4);
+    }
+}
+.circle:before{
+    content: "SCROLL DOWN";
+    font-size: .7rem;
+    position: absolute;
+    text-align: center;
+    left: 8px;
+    top:-22px
+}
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: -1;
+}
+.card .details h4{
+    font-size: 1.5rem;
+    position: relative;
+    top: 20px;
+}
+.card .details p{
+    font-size: .9rem;
+    position: relative;
+    top: 30px;
+}
+.card .details a{
+    position: relative;
+    left: 26%;
+    top: 23px;
+    padding: 6px 20px;
+    background-color: rgb(0,0,0,.6);
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.card .details a:hover{
+    box-shadow: 0 0 20px rgb(0,0,0,.4);
+}
+.second-center-part{
+    height: 90vh;
+}
+.center-text{
+    width: 100%;
+    height: 25%;
+}
+.center-text h3{
+    margin-top: 5px;
+    padding: 7px 0;
+}
+.center-text h3 .inf{
+    color: rgb(173, 32, 166);
+    font-size: 4rem;
+}
+.second-center-part p{
+    position: absolute;
+    top: 52%;
+    left: 0;
+}
+.second-center-part a{
+    position: relative;
+    top: 35%;
+    left: 18%;
+    padding: 10px 30px;
+    margin:  0 6px;
+    transform: translateX(-50%);
+    background-color: rgb(0,0,0,.6);
+    color: #ffffff;
+    text-transform: uppercase;
+    transition-duration: 400ms;
+}
+.second-center-part a:hover{
+    box-shadow: 0 0 20px rgb(0,0,0,.2);
+    text-decoration: none;
+    color: #ffffff;
+}
+/******count start*****/
+.cntelement{
+    width: 100%;
+    height: 50vh;
+}
+.testo{
+    position: relative;
+    top: 110px;
+    padding: 10px 30px;
+}
+.prtfolio{
+    width: 100%;
+    height: 90vh;
+
+}
+.first-prtfolio{
+    height: 65vh;
+    margin-top: 20px;
+}
+.first-prtfolio p{
+    font-size: 1rem;
+}
+.fter{
+    font-size: 2.2rem;
+    color: rgba(22, 23, 95, 0.37);
+}
+.second-prtfolio{
+    height: 65vh;
+    margin-top: 20px;
+}
+.swiper-container{
+    width: 400px;
+    height: 300px;
+    margin-top: 10px;
+}
+.second-prtfolio a{
+    position: relative;
+    top: 46px;
+    left: 35%;
+    transform: translateX(-50%);
+    background-color: rgb(0,0,0,.6);
+    padding: 13px 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.second-prtfolio a:hover{
+    color: #ffffff;
+    box-shadow: 0 0 20px rgb(0,0,0,.2);
+    text-decoration: none;
+}
+/******count end*****/
+
+/******project start*****/
+.prjct{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+.first-project{
+    height: 65vh;
+}
+.first-project p{
+    margin-top: 50px;
+}
+.second-project{
+    height: 65vh;
+}
+
+/******project end*****/
+
+/*****service start****/
+.cm-part{
+    width: 100%;
+    height: auto;
+}
+.main-container{
+    width: 290px;
+    height: 380px;
+    margin: 10px 0;
+    perspective: 700px;
+    position: relative;
+    left: 50%;
+    perspective: 700px;
+    transform: translateX(-50%);
+}
+.main-container .card{
+    width: 100%;
+    height: 100%;
+    transition: all 2s ease;
+    transform-style: preserve-3d;
+}
+.main-container:hover .card{
+    transform: rotateY(180deg);
+}
+.front-side, .back-side{
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.front-side img{
+    width: 100%;
+    height: 100%;
+}
+.back-side {
+    transform: rotateY(180deg);
+    position: relative;
+    background-image: linear-gradient(to right,rgba(204, 235, 235, 0.246) 30%,rgba(136, 138, 246, 0.205) 70%);
+}
+.back-side i{
+    font-size: 5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    color: rgb(180, 154, 124);
+}
+.back-side h2{
+    margin-top: 50px;
+}
+.back-side a{
+    position: relative;
+    left: 23%;
+    transform: translateX(-50%);
+    padding: 8px 30px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,rgba(255, 230, 0, 0.808),rgba(255, 199, 252, 0.76));
+    color: #000000;
+    transition-duration: 400ms;
+}
+.back-side a:hover{
+    box-shadow: 0 0 20px rgb(0,0,0,.4);
+    text-decoration: none;
+    color: #000000;
+}
+/***service end***/
+/***contact part start****/
+.cnt-part{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+.contact-frist{
+    height: 69vh;
+}
+.contact-frist form{
+    margin-top: 50px;
+}
+.contact-frist form button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact-second{
+    height: 69vh;
+}
+.contact-second p{
+    margin: 50px 0;
+    font-size: 1.1rem;
+}
+.what{
+    font-size: 3rem;
+    padding: 3px 15px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.171);
+    color: rgb(51, 255, 0);
+}
+
+/***contact part end****/
+/******about part start********/
+.ftr-part{
+    width: 100%;
+    height: 58vh;
+}
+.snd-ftr{
+    text-align: center;
+}
+.snd-ftr li {
+    margin: 10px 0;
+    list-style: none;
+}
+.scrolltop i{
+    font-size: 2rem;
+    position: fixed;
+    bottom: 40px;
+    border: 2px solid rgb(243, 239, 6);
+    right: 15px;
+    padding: 10px 16px;
+    border-radius: 60px;
+    border-top: none;
+    color: rgb(255, 230, 0);
+    cursor: pointer;
+
+}
+.plus{
+    position: fixed;
+    left: 34px;
+    width: 50px;
+    bottom: 7%;
+    height: 50px;
+    background-color: rgba(37, 221, 13, 0.705);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #05ffff;
+    font-size: 2.5rem;
+    transition-duration: 400ms;
+}
+.plus:before{
+
+}
+.plus:after{
+    content: '';
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #58ea00;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    opacity: 0;
+    border-radius: 50%;
+    animation: animatf 1.5s linear infinite;
+}
+.plus:hover{
+    transform: translateY(-10px) rotateY(180deg);
+}
+@keyframes animatf {
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+   
+/******about part end********/
+
+/****media queries***/
+@media(max-width:768px){
+    .navbar{
+        text-align: center;
+    }
+    .header-part{
+        height: auto;
+    }
+    .center-part{
+        height: auto;
+        
+    }
+    .card .details p{
+        font-size: .7rem;
+        position: relative;
+        top: 30px;
+    }
+    .card .details a{
+       padding: 4 10px;
+    }
+    .frist-center-part .card{
+        width: 59%;
+        height: 48%;
+        top: 35%;
+    }
+    .center-text {
+        height: 36%;
+    }
+    .second-center-part img{
+        width: 550px;
+        position: absolute;
+        left: 2%;
+    }
+    .second-center-part p{
+        top: 45%;
+        left: 0;
+        font-size: .9rem;
+    }
+    .second-center-part a{
+        position: relative;
+        top: 79%;
+        left: 5%;
+        padding: 10px 30px;
+        margin:  0 6px;
+    }
+    .search-txt{
+        width: 230px;
+    }
+    .circle{
+        top: 66%;
+    }
+    .cntelement{
+        height: auto;
+        position: relative;
+        bottom: 50px;
+    }
+    .testo{
+        top: 10px;
+        padding: 5px 10px;
+
+    }
+    .testo h3{
+        font-size: 1rem ;
+    }
+    .testo p{
+        font-size: .5rem;
+    }
+    .prtfolio{
+        height: auto;
+    }
+    .first-prtfolio{
+        height: auto;
+    }
+    .swiper-container{
+        width: 300px;
+        height: 300px;
+        margin-top: 10px;
+    }
+    .second-prtfolio a{
+        left: 30%;
+    }
+    .prjct{
+        height: auto;
+    }
+    .cnt-part{
+        height: auto;
+    }
+
+}
+/*****animating code*****/
